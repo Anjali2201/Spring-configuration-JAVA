@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+">
+   <!-- <bean id="perm_adr" class="spring.Address">  
+        <constructor-arg name="adrtype" value="Temporary Address"/>  
+        <constructor-arg name="bldg" value="C-18"/>
+        <constructor-arg name="city" value="Nagpur"/>
+        <constructor-arg name="state" value="Mh"/>
+        <constructor-arg name="pin" value="40000"/>
+    </bean>
+    
+    <bean id="alt_adr" class="spring.Address">
+        <constructor-arg name="adrtype" value="Permanent Address"/>  
+        <constructor-arg name="bldg" value="ab-10"/>
+        <constructor-arg name="city" value="Pune"/>
+        <constructor-arg name="state" value="Mh"/>
+        <constructor-arg name="pin" value="40005"/>
+    </bean>
+    
+    <bean id="adr" class="java.util.ArrayList"> 
+        <constructor-arg>
+            <list>
+                <ref bean="perm_adr"/>  
+                <ref bean="alt_adr"/>  
+            </list>
+        </constructor-arg>
+    </bean>
+    
+    <bean id="name" class="spring.nameofsib">  
+        <constructor-arg>
+            <list>
+                <value>1.Deepika</value>
+                <value>2.Ravi</value>
+            </list>
+        </constructor-arg>
+    </bean>
+     <bean id="name" class="spring.nameofsib">  
+        <constructor-arg name="name" value="Deepika"/>
+    </bean>
+    
+    <bean id="nameofsib" class="java.util.ArrayList"> 
+        <constructor-arg>
+            <list>
+                  <value>1.Deepika</value>
+                <value>2.Ravi</value>
+            </list>
+        </constructor-arg>
+    </bean>
+    
+    <bean id="a5" class="spring.Student" autowire="byType"> 
+        <property name="name">
+            <value>Hiya</value>
+        </property> 
+        <property name="roll">
+            <value>02</value>
+        </property>
+        
+        
+        
+    </bean>
+
+        <bean id="adr" class="spring.Address" > 
+        <property name="adrtype" value="Temporary Address" /> 
+        <property name="bldg" value="Flat-402" />
+        <property name="city" value="Nagpur" />
+        <property name="state" value="Mh" />  
+        <property name="pin" value="40004" /> 
+    </bean>
+
+    
+        <bean id="a4" class="spring.student1" autowire="byType"> 
+        <property name="name"><value>Hiya</value></property> 
+        <property name="roll"><value>02</value></property> 
+    </bean>
+    
+    
+    
+   
+</beans>-->
+
+
+
+ <bean id="a1" class="spring.Address">
+     <property name="adrtype" value="alternate"/>
+        <property name="bldg" value="WCL"/>
+        <property name="city" value="Nagpur"/>
+        <property name="state" value="Mah"/>
+        <property name="pin" value="440001"/> 
+    </bean>
+    
+     <bean id="a2" class="spring.Address">
+         <property name="adrtype" value="College"/>
+        <property name="bldg" value="C-18"/>
+        <property name="city" value="Nagpur"/>
+        <property name="state" value="Mah"/>
+        <property name="pin" value="440201"/> 
+    </bean>
+   
+<!--    <bean id = "addr" class="spring.Address">
+        <constructor-arg index ="0" value="U-2"/>
+        <constructor-arg index ="2" value="UP"/>
+        <constructor-arg name ="city" value="Nagpur"/>
+        <constructor-arg value ="440023" type="int"/>
+    </bean>
+  -->
+    <bean id ="s1" class="spring.student1" autowire="byName">
+        <property name="name" value="Anjali"/>
+        <property name="roll" value="12"/>
+       <property name="addr" ref="a2"/>
+      
+    </bean>
+    <bean id="alternateAddr" class="java.util.ArrayList" >
+        <constructor-arg>
+            <list>
+                <ref bean="a1"/>
+            </list>
+        </constructor-arg>
+    </bean>
+    
+      <bean id="nameofsiblings" class="java.util.ArrayList" >
+        <constructor-arg>
+            <list>
+                <value>Ravi</value>
+                <value>Hiya</value>
+            </list>
+        </constructor-arg>
+    </bean>
+    <!--
+    -->
+<!--        <bean id ="s1" class="spr.Student" autowire="byType">
+        <property name="name" value="Anjali"/>
+        <property name="roll" value="12"/>
+    </bean>-->
+    
+</beans>

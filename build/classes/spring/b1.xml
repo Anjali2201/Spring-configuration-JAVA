@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+">
+    <bean id="perm_adr" class="spring.Address">  
+        <constructor-arg name="adrtype" value="Temporary Address"/>  
+        <constructor-arg name="bldg" value="C-18"/>
+        <constructor-arg name="city" value="Nagpur"/>
+        <constructor-arg name="state" value="Mh"/>
+        <constructor-arg name="pin" value="40000"/>
+    </bean>
+    
+    <bean id="alt_adr" class="spring.Address">
+        <constructor-arg name="adrtype" value="Permanent Address"/>  
+        <constructor-arg name="bldg" value="ab-10"/>
+        <constructor-arg name="city" value="Pune"/>
+        <constructor-arg name="state" value="Mh"/>
+        <constructor-arg name="pin" value="40005"/>
+    </bean>
+  
+    <bean id="a3" class="spring.Student"> 
+        <property name="name"><value>Anjali</value></property> 
+        <property name="roll"><value>01</value></property> 
+        <property name="adr"><list>
+                <ref bean="perm_adr"/>  
+                <ref bean="alt_adr"/>  
+        </list></property>
+        <property name="nameofsib"><list>
+                <value>1.Deepika</value>
+                <value>2.Ravi</value>
+        </list></property>  
+    </bean > 
+  
+   <bean id="clgadr" class="spring.Address">  
+        <constructor-arg name="adrtype" value="Office Address"/>  
+        <constructor-arg name="bldg" value="B24"/>
+        <constructor-arg name="city" value="Nagpur"/>
+        <constructor-arg name="state" value="Mh"/>
+        <constructor-arg name="pin" value="40000"/>
+    </bean>
+    
+   <bean id="c1" class="spring.college">
+        <property name="id" value="123"/> 
+        <property name="office">
+            <list><ref bean="clgadr"/></list>
+        </property>
+    </bean> 
+     
+   <bean id="c2" class="spring.collnamemap">  
+        <property name="mapping">  
+            <map><entry key="Rcoem" value-ref="c1"/></map>  
+        </property>
+    </bean> 
+    
+</beans>
+
+

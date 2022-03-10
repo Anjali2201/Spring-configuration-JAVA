@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+">
+    
+    <bean id="comp" class="spring.Employee"> 
+        <property name="company" value="RCOEM" /> 
+    </bean>
+    
+     <bean id="dept" class="spring.Employee" parent="comp"> 
+        <property name="dept" value="CSE" /> 
+    </bean>
+    
+    <bean id="emp1" class="spring.Employee" parent="dept"> 
+        <property name="name" value="Anjali" /> 
+        <property name="salary" value="10000" /> 
+    </bean>
+    
+    <bean id="emp2" class="spring.Employee" parent="dept"> 
+        <property name="name" value="Hiya" /> 
+        <property name="salary" value="10000" /> 
+    </bean>
+    
+    <bean id="emp3" class="spring.Employee" parent="dept"> 
+        <property name="name" value="Rohit" /> 
+        <property name="salary" value="10000" /> 
+    </bean>
+    
+    <bean id="emp4" class="spring.Employee" parent="dept"> 
+        <property name="name" value="Muskaan" /> 
+        <property name="salary" value="10000" /> 
+    </bean>
+    
+    <bean id="emp5" class="spring.Employee" parent="dept"> 
+        <property name="name" value="Lavish" /> 
+        <property name="salary" value="10000" /> 
+    </bean>
+    
+
+</beans>
